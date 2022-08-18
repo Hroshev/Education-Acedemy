@@ -1,0 +1,98 @@
+.courses {
+    margin-bottom: 128px;
+    @include tablet-min {
+        margin-bottom: 96px;
+    }
+    h3 {
+        margin: 18px 0px 67px 0px;
+    }
+    .courses__wrapp {
+
+
+        .courses__wrapp_box {  
+            &:first-child{
+                padding: 32px;
+                width: 570px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.496886) 100%), url("@img/courses/courses__1.png") 50% 50%/cover no-repeat;
+                @include tablet-min {
+                    padding: 32px 24px;
+                }
+            }
+            padding: 24px 24px 32px 24px;
+            width: 270px;
+            height: 416px;
+            border-radius: 12px;
+            background: url("@img/courses/courses__2.png") 50% 50%/cover no-repeat; 
+            .courses__wrapp_box-courses {
+                padding: 6px 13px;
+                display: inline-block;
+                background: #e3f0ff; //Менять
+                text-align: center;
+                border-radius: 16px;
+                h4 {
+                    font-size: 16px;
+                }
+            }
+            .courses__wrapp_box-content {
+                margin-top: 143px;
+                @include tablet-min {
+                    margin-top: 134px;
+                }
+                h5 {
+                    margin-bottom: 43px;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    letter-spacing: -1px;
+                    color: #fff;
+                    @include tablet-min {
+                        margin-bottom: 19px;
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                }
+                .courses__box-content_wrapp {
+                    flex-wrap: wrap;
+                    .courses__box-content_lecturer{
+                        @include tablet-min {
+                            margin-bottom: 30px;
+                        }
+                        img{
+                            width: 32px;
+                            height: 32px;
+                        }
+                        p {
+                            font-size: 16px;
+                            margin-left: 10px;
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                    }
+                    .courses__box-content_wrapp-price {
+                        @include tablet-min {
+                            max-width: 450px;
+                            width: 100%;
+                        }
+                        p {
+                            margin-right: 24px;
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: #fff;
+                        }
+                        .courses__first-btn{
+                            background: #FF7988;
+                            color: #fff;
+                            border: none;
+                        }
+                        .btn {
+                            padding: 15px 20px;
+                            max-width: 135px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
