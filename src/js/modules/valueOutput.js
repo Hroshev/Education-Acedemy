@@ -96,8 +96,7 @@ const createCard = function (product) {
   const coursesBoxContent = makeElement("div", "courses__box-content");
   coursesBox.appendChild(coursesBoxContent);
 
-  const course = makeElement("h5", "", product.course);
-  console.log(product[0])
+  const course = makeElement("h5", "course", product.course);
   coursesBoxContent.appendChild(course);
 
   const coursesBoxContentWrapp = makeElement("div", "courses__box-content-wrapp");
@@ -110,26 +109,43 @@ const createCard = function (product) {
   imgLecture.src = product.imgLecture;
   coursesBoxContentLecturer.appendChild(imgLecture);
 
-  const lecturer = makeElement("p", "", product.lecturer);
+  const lecturer = makeElement("p", "lecturer", product.lecturer);
   coursesBoxContentLecturer.appendChild(lecturer);
 
   const coursesBoxContentPrice = makeElement("div", "courses__box-content-price");
   coursesBoxContentWrapp.appendChild(coursesBoxContentPrice);
 
-  const price = makeElement("p", "", "$" + product.price);
+  const price = makeElement("p", "price", "$" + product.price);
   coursesBoxContentPrice.appendChild(price);
 
-  const button = makeElement("a", "btn", "Start Now");
+  const button = makeElement("a", "courses__button", "Start Now");
   button.href = "#";
   coursesBoxContentPrice.appendChild(button);
 
   return coursesBox;
 };
 
-//Перебор массива
+/* Stretch the array */
 const cardList = document.querySelector(".courses__wrapp");
 
 for (let i = 0; i < cardsProduct.length; i++) {
   const cardItem = createCard(cardsProduct[i]);
   cardList.appendChild(cardItem);
 }
+
+
+/* Style first box */
+const firstCourse = document.querySelector(".course")
+firstCourse.classList.add("first__course")
+
+const firstlecturer = document.querySelector(".lecturer")
+firstlecturer.classList.add("first__lecturer")
+
+const firstCoursesBoxPrice = document.querySelector(".courses__box-content-price")
+firstCoursesBoxPrice.classList.add("first__box-content-price")
+
+const firstPrice = document.querySelector(".price")
+firstPrice.classList.add("first__price")
+
+const firstbtn = document.querySelector(".courses__button")
+firstbtn.classList.add("first__btn")

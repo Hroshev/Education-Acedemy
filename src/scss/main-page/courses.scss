@@ -17,10 +17,8 @@
             &:first-child {
                 padding: 32px;
                 width: 570px;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.496886) 100%);
                 background-position: 50% 50%;
                 background-size: cover;
-                box-shadow: none;
                 @include tablet {
                     padding: 32px 24px;
                     width: 329px;
@@ -98,10 +96,26 @@
                         .first__price {
                             color: #fff;
                         }
-                        .btn {
-                            max-width: 128px;
+                        .courses__button {
+                            font-size: 14px;
                             padding: 15px 18px;
-                            line-height: 18px;
+                            font-weight: 700;
+                            border: 1px solid rgba(74, 144, 226, 0.3);
+                            border-radius: 6px;
+                            max-width: 128px;
+                            width: 100%;
+                            display: inline-block;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: $btn-color;
+                            background-color: $btn-background;
+                            transition: background-color 0.2s ease;
+                            &:hover {
+                                background-color: $lighter-color;
+                            }
+                            &:focus {
+                                background-color: transparent;
+                            }
                         }
                         .first__btn {
                             padding: 15px 22px;
