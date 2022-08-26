@@ -1,33 +1,59 @@
 const cardsProduct = [
   {
-    isAvaliable: false,
-    imgUrl: "img/featuredProducts/1.png",
-    title: "Wooden Table-Chair",
-    text: "You don’t have and a tablechair. Shop with 40% discount !",
-    price: 1299,
-    specialPrice: 1199,
-    rating: "★★★",
-    isSpecial: true,
+    categories: "Math",
+    imgBackground: "img/courses/courses__1.png",
+    course: "Ipsum dolor sit amet consectetur",
+    lecturer: "Donat Twerski",
+    imgLecture: "img/courses/user/DonatTwerski.png",
+    price: 24,
   },
   {
-    isAvaliable: true,
-    imgUrl: "img/featuredProducts/2.png",
-    title: "Wooden Table-Chair",
-    text: "You don’t have and a tablechair. Shop with 40% discount !",
-    price: 1599,
-    specialPrice: 1399,
-    rating: "★★★★",
-    isSpecial: false,
+    categories: "Physics",
+    imgBackground: "img/courses/courses__2.png",
+    course: "Sed do eiusmod tempor",
+    lecturer: "Ohta Kin",
+    imgLecture: "img/courses/user/OhtaKin.png",
+    price: 24,
   },
   {
-    isAvaliable: true,
-    imgUrl: "img/featuredProducts/3.png",
-    title: "Wooden Table-Chair",
-    text: "You don’t have and a tablechair. Shop with 40% discount !",
-    price: 1399,
-    specialPrice: 1099,
-    rating: "★★",
-    isSpecial: true,
+    categories: "Chemistry",
+    imgBackground: "img/courses/courses__3.png",
+    course: "Labore et dolore magna",
+    lecturer: "Alicia Puma",
+    imgLecture: "img/courses/user/AliciaPuma.png",
+    price: 15,
+  },
+  {
+    categories: "Informatics",
+    imgBackground: "img/courses/courses__4.png",
+    course: "Commodo consequat",
+    lecturer: "Francisco Maia",
+    imgLecture: "img/courses/user/FranciscoMaia.png",
+    price: 7,
+  },
+  {
+    categories: "Math",
+    imgBackground: "img/courses/courses__5.png",
+    course: "Ullamco laboris nisi ut aliquip",
+    lecturer: "Yolanda Barrueco",
+    imgLecture: "img/courses/user/YolandaBarrueco.png",
+    price: 30,
+  },
+  {
+    categories: "Chemistry",
+    imgBackground: "img/courses/courses__6.png",
+    course: "Quis nostrud exercitation",
+    lecturer: "Edward Lindgren",
+    imgLecture: "img/courses/user/EdwardLindgren.png",
+    price: 22,
+  },
+  {
+    categories: "Math",
+    imgBackground: "img/courses/courses__7.png",
+    course: "Enim ad minim veniam",
+    lecturer: "Joslin Rodgers",
+    imgLecture: "img/courses/user/JoslinRodgers.png",
+    price: 18,
   },
 ];
 
@@ -40,52 +66,68 @@ const makeElement = function (tagName, className, text) {
   return element;
 };
 
-const createCard = function (product) {
-  const listItem = makeElement("li");
-
-  const picture = makeElement("img");
-  picture.src = product.imgUrl;
-  listItem.appendChild(picture);
-
-  const title = makeElement("h3", "", product.title);
-  listItem.appendChild(title);
-
-  const text = makeElement("h4", "", product.text);
-  listItem.appendChild(text);
-
-  const inner = makeElement("div", "inner");
-  listItem.appendChild(inner);
-
-  const innerWrap = makeElement("div", "inner__wrap");
-  inner.appendChild(innerWrap);
-
-  const innerWrapPrice = makeElement("div", "inner__wrap__price");
-  innerWrap.appendChild(innerWrapPrice);
-
-  const price = makeElement("i", "", "$" + product.price);
-  innerWrapPrice.appendChild(price);
-
-  const star = makeElement("p", "", product.rating);
-  innerWrap.appendChild(star);
-
-  const button = makeElement("a", "btn__min");
-  button.href = "#";
-  !product.isAvaliable ? button.textContent = "Sold" : button.textContent = "Shop Now";
-  inner.appendChild(button);
-
-  if (product.isSpecial) {
-    price.classList.add("products__special");
-    const specialPrice = makeElement("span", "", "$" + product.specialPrice);
-    innerWrapPrice.appendChild(specialPrice);
+function backgroundColorcategories(categories){
+  if(categories == "Math"){
+    return "#E3F0FF"
   }
+  else if(categories == "Physics"){
+    return "#FFF2DE"
+  }
+  else if(categories == "Chemistry"){
+    return "#ECFFD7"
+  }
+  else if(categories == "Informatics"){
+    return "#FFE2E5"
+  }
+}
 
-  !product.isAvaliable ? listItem.classList.add("products__avaliable") : "";
+const createCard = function (product) {
 
-  return listItem;
+  const coursesBox = makeElement("div", "courses__box");
+  coursesBox.style.backgroundImage = `url(${product.imgBackground})`;
+
+  const coursesBoxCourses = makeElement("div", "courses__box-courses");
+  coursesBoxCourses.style.backgroundColor = backgroundColorcategories(product.categories);
+  coursesBox.appendChild(coursesBoxCourses);
+
+  const categories = makeElement("h4", "", product.categories);
+  coursesBoxCourses.appendChild(categories);
+
+  const coursesBoxContent = makeElement("div", "courses__box-content");
+  coursesBox.appendChild(coursesBoxContent);
+
+  const course = makeElement("h5", "", product.course);
+  console.log(product[0])
+  coursesBoxContent.appendChild(course);
+
+  const coursesBoxContentWrapp = makeElement("div", "courses__box-content-wrapp");
+  coursesBoxContent.appendChild(coursesBoxContentWrapp);
+
+  const coursesBoxContentLecturer = makeElement("div", "courses__box-content-lecturer");
+  coursesBoxContentWrapp.appendChild(coursesBoxContentLecturer);
+
+  const imgLecture = makeElement("img");
+  imgLecture.src = product.imgLecture;
+  coursesBoxContentLecturer.appendChild(imgLecture);
+
+  const lecturer = makeElement("p", "", product.lecturer);
+  coursesBoxContentLecturer.appendChild(lecturer);
+
+  const coursesBoxContentPrice = makeElement("div", "courses__box-content-price");
+  coursesBoxContentWrapp.appendChild(coursesBoxContentPrice);
+
+  const price = makeElement("p", "", "$" + product.price);
+  coursesBoxContentPrice.appendChild(price);
+
+  const button = makeElement("a", "btn", "Start Now");
+  button.href = "#";
+  coursesBoxContentPrice.appendChild(button);
+
+  return coursesBox;
 };
 
 //Перебор массива
-const cardList = document.querySelector(".featured__products");
+const cardList = document.querySelector(".courses__wrapp");
 
 for (let i = 0; i < cardsProduct.length; i++) {
   const cardItem = createCard(cardsProduct[i]);

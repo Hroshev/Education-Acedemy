@@ -1,4 +1,5 @@
 import "./modules/burger.js";
+import "./modules/valueOutput.js";
 
 /*
 import "./modules/regularExpressions.js";
