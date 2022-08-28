@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        // justify-content: center;
+        justify-content: center;
         gap: 30px;
 
         .courses__box {
@@ -132,5 +132,8 @@
                 }
             }
         }
+    }
+    button{
+        margin-top: 32px;
     }
 }
