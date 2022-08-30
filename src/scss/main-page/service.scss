@@ -1,0 +1,41 @@
+.service{
+    margin-bottom: 176px;
+    @include tablet-min {
+        margin-bottom: 160px;
+    }
+    .service__top__wrapp{
+        margin-bottom: 208px;
+        @include tablet-min {
+            margin-bottom: 160px;
+            flex-direction: column;
+        }
+        .service__top__image{
+            margin: 0px 20px 0px 0px;
+            @include tablet-min {
+                margin: 0px 0px 31px 0px;
+            }
+            img{
+                min-width: 320px;
+            }
+        }
+        .service__top__content{
+            max-width: 470px;
+            h3{
+                margin: 18px 0px 28px 0px;
+                @include tablet-min {
+                    margin: 15px 0px 15px 0px;
+                }
+            }
+            p{
+                margin-bottom: 34px;
+                line-height: 32px;
+                @include tablet-min {
+                    margin-bottom: 15px;
+                }
+            }
+            button{
+                max-width: 170px;
+            }
+        }
+    }
+}
