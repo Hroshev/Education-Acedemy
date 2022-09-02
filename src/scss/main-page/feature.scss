@@ -1,0 +1,105 @@
+.feature{
+    position: relative;
+    margin-bottom: 368px;
+    padding-bottom: 416px;
+    background: #F2F2F2;
+    @include desktop-min {
+        padding-bottom: 720px;
+    }
+    @include tablet-min{
+        padding-bottom: 1476px;
+        margin-bottom: 350px;
+    }
+    .feature__wrapp{
+        @include tablet-min{
+            flex-direction: column;
+        }
+        .feature__content{
+            max-width: 470px;
+            h2{
+                margin-bottom: 18px;
+                @include tablet-min{
+                    margin-bottom: 15px;
+                }
+            }
+            p{
+                margin: 28px 0 34px 0;
+                line-height: 32px;
+                @include tablet-min{
+                    margin: 15px 0 12px 0;
+                }
+            }
+            a{
+                max-width: 170px;
+            }
+        }
+        .feature__image{
+            margin-left: 20px;
+            min-width: 320px;
+            @include tablet-min{
+                margin-top: 48px;
+            }
+        }
+    }
+    .feature__box__position{
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        @include desktop-min {
+            top: 81%;
+        }
+        @include tablet-min {
+            top: 72%;
+        }
+        .feature__wrapp__box{
+            display: grid;
+            grid-template-columns: repeat(4, 270px);
+            grid-template-rows: 1fr;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            @include desktop-min {
+                grid-template-columns: repeat(2, 270px);
+                grid-template-rows: 2fr;
+            }
+            @include tablet-min {
+                grid-template-columns: repeat(1, 270px);
+                grid-template-rows: 4fr;
+            }
+            .feature__box{
+                max-width: 270px;
+                padding: 32px 32px 37px 32px;
+                background: #FFFFFF;
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.0818614);
+                border-radius: 12px;
+                .feature__box-image{
+                    position: relative;
+                    width: 96px;
+                    height: 96px;
+                    border-radius: 50%;
+                    background: #E3F0FF;
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-right: -50%;
+                        transform: translate(-50%, -50%)
+                    }
+                }
+                h4{
+                    margin: 56px 0px 19px 0px;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 32px;
+                }
+                p{
+                    font-size: 16px;
+                    color: $second-color;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
