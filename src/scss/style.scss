@@ -1,18 +1,5 @@
 /* Connecting fonts */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
-@font-face {
-	font-family: 'Lucida Grande';
-	src: url('../files/fontslucidagrande.eot');
-	src: local('☺'), url('../files/fonts/lucidagrande.woff') format('woff'), url('../files/fonts/lucidagrande.ttf') format('truetype'), url('../files/fonts/lucidagrande.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-// font-family: 'Sora', sans-serif;
-// font-family: 'Lucida Grande', sans-serif;
-
-
 @import "../scss/reset.scss";
 @import "../scss/media-requests.scss";
 @import "../scss/adaptive-property.scss"; 
@@ -101,11 +88,17 @@ body {
 @import "../scss/main-page/learnEasy.scss";
 @import "../scss/main-page/feature.scss";
 @import "../scss/main-page/service.scss";
+@import "../scss/main-page/courseFind.scss";
+@import "../scss/main-page/events.scss";
 
+@import "../scss/main-page/faq.scss";
+
+@import "../scss/main-page/download.scss";
 @import "../scss/main-page/footer.scss";
 
 /* JS modules */
 @import "../scss/modules/burger.scss";
+@import "../scss/modules/popup.scss";
 
 /* 
 @import "../scss/modules/popup.scss";
@@ -136,6 +129,6 @@ body {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
     background: url("@img/courses/courses__1.png") 50% 50%/cover no-repeat; 
 */

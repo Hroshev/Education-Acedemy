@@ -7,6 +7,6 @@ function calendar() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const monthString = months[month];
 
-    document.getElementById('data').innerHTML = `<p>© Copyright All Rights Reserved ${year}</p>`;
+    document.getElementById('data').innerHTML = `<p>Copyright © ${year} Laaqiq. All Rights Reserved.</p>`;
 }
 calendar();

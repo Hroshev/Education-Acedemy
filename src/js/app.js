@@ -1,5 +1,10 @@
 import "./modules/burger.js";
-import "./modules/valueOutput.js";
+import "./modules/courses.js";
+import "./modules/events.js";
+import "./modules/accordion.js";
+import "./modules/popup.js";
+import "./modules/date.js";
+
 
 /*
 import "./modules/regularExpressions.js";

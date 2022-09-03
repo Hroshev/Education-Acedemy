@@ -1,6 +1,6 @@
 .learn{
     padding-bottom: 256px;
-    background: #F2F2F2;
+    background: url("@img/learnEasy/learnEasyBackground.png") 50% 50% no-repeat, #eaf3ff;
     @include tablet-min{
         padding-bottom: 155px;
     }
@@ -17,7 +17,6 @@
     .learn__content{
         max-width: 770px;
         margin: 0 auto;
-        // background: url("@img/learnEasy/learnEasyBackground.png") 50% 50%/cover no-repeat;
         .learn__content-box{
             margin: 0 auto 32px 0;
             max-width: 670px;

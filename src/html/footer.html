@@ -1,5 +1,46 @@
 <footer class="footer">
     <div class="footer__container">
-        <h2>Footer</h2>
+        <div class="footer__position">
+            @@include('../html/courseFind.html',{})
+        </div>
+        <div class="footer__wrapp">
+            <h5 class="footer__logo">ACA</h5>
+            <div class="footer__menu">
+                <ul class="footer__nav">
+                    <h3 class="footer__title">Menu</h3>
+                    <li><button>About</button></li>
+                    <li><button>Pricing</button></li>
+                    <li><button>Blog</button></li>
+                    <li><button>Contact</button></li>
+                </ul>
+            </div>
+            <div class="footer__service">
+                <ul class="footer__nav">
+                    <h3 class="footer__title">Service</h3>
+                    <li><button>Learning</button></li>
+                    <li><button>Schedules</button></li>
+                    <li><button>Communities</button></li>
+                    <li><button>All Services</button></li>
+                </ul>
+            </div>
+            <div class="footer__social-network wrapper">
+                <a target="_blank" href="https://www.facebook.com/">
+                    <img src="@img/footer__facebook.svg" alt="facebook">
+                </a>
+                <a target="_blank" href="https://twitter.com/">
+                    <img src="@img/footer__twitter.svg" alt="twitter">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img src="@img/footer__instagram.svg" alt="instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer__sub wrapper">
+            <div class="footer__copyright" id="data"></div>
+            <div class="footer__popup wrapper">
+                <a href="#Terms_Of_Use" class="popup-link">Terms of Use</a>
+                <a href="#Privacy_Policy" class="popup-link">Privacy Policy</a>   
+            </div>
+        </div>
     </div>
 </footer>

@@ -1,0 +1,43 @@
+.download{
+    margin-bottom: 340px;
+    .download__wrapp{
+        gap: 20px;
+        @include tablet-min {
+            flex-direction: column;
+            gap: 64px;
+        }
+        .download__content{
+            max-width: 470px;
+            h3{
+                margin: 18px 0px 28px 0px;
+                @include tablet-min {
+                    margin: 15px 0px 15px 0px;
+                }
+            }
+            p{
+                margin-bottom: 34px;
+                line-height: 32px;
+                @include tablet-min {
+                    margin-bottom: 12px;
+                }
+            }
+            .download__content__button{
+                max-width: 335px;
+                width: 100%;
+                gap: 10px;
+                a{
+                    opacity: 1;
+                    transition: opacity .2s ease;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+        .download__image{
+            img{
+                min-width: 320px;
+            }
+        }
+    }
+}

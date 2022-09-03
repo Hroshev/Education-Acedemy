@@ -30,7 +30,7 @@
             }
             .popup__close {
                 position: absolute;
-                top: 10px;
+                top: 20px;
                 right: 10px;
                 width: 32px;
                 height: 32px;
@@ -54,8 +54,25 @@
                     transform: rotate(-45deg);
                 }
             }
-            .popup__title {}
-            .popup__text {}
+            .popup__title {
+                h3{
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                    border-bottom: 1px solid #c4ccd6;
+                    font-weight: 700;
+                }
+            }
+            .popup__text {
+                p{
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    color: $second-color;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
         }
     }
     &.open {
