@@ -106,14 +106,14 @@ $background__burger__menu-open: #eaf3ff;
                     }
                 }
                 .menu__list {
-                    @media (min-width: 768px) {
+                    @media (min-width: 769px) {
                         display: flex;
                         align-items: center;
                     }
                     li {
                         position: relative;
                         margin: 0px 0px 0px 40px;
-                        @media (min-width: 768px) {
+                        @media (min-width: 769px) {
                             padding: 10px 0;
                         }
                         @include tablet-min {

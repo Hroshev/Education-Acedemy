@@ -1,5 +1,7 @@
-/* 
-@import "swiper";
-@import "../../node_modules/swiper/swiper.scss";
-@import "../../node_modules/swiper/modules/navigation/navigation.scss";
-*/
+/* Import Swiper + navigation, pagination modules */
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+@import "../../node_modules/swiper/modules/pagination/pagination";
+
+/* Import all modules Swiper */
+// @import "../../node_modules/swiper/swiper-bundle";

@@ -1,0 +1,54 @@
+.team {
+    padding: 123px 0px 139px 0px;
+    background: #eaf3ff;
+    @include tablet-min {
+        padding: 91px 0px 91px 0px;
+    }
+    .title {
+        margin: 18px 0px 67px 0px;
+    }
+    .swiper {
+        width: 1170px;
+        height: 375px;
+        .swiper-slide {
+            padding: 32px 32px 37px 32px;
+            min-width: 270px;
+            min-height: 368px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.0818614);
+            border-radius: 12px;
+            .team__swiper-slide__image {
+                position: relative;
+                width: 206px;
+                height: 206px;
+                border-radius: 50%;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 48px;
+                    height: 48px;
+                    bottom: 0;
+                    right: 10px;
+                    background: url("@img/team/team__iconFacebook.png") 50% 50%/cover no-repeat; 
+                }
+            }
+            .team__swiper-slide__fullName {
+                margin: 26px 0px 3px 0px;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+            }
+            .team__swiper-slide__course {
+                font-size: 16px;
+                line-height: 32px;
+                color: $second-color;
+            }
+        }
+        .swiper-button-next{}
+        .swiper-button-prev{}
+    }
+}
