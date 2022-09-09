@@ -1,8 +1,6 @@
 /* Connecting fonts */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
 @import "../scss/reset.scss";
 @import "../scss/media-requests.scss";
-// @import "../scss/adaptive-property.scss"; 
 
 /* text color */
 $first-color: #333333;
@@ -100,17 +98,4 @@ body {
 /* JS modules */
 @import "../scss/modules/burger.scss";
 @import "../scss/modules/popup.scss";
-@import "../scss/modules/swiper.scss"; 
-
-
-/* <---Наработки---> */
-
-//****Center IMG ****
-/*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    background: url("@img/courses/courses__1.png") 50% 50%/cover no-repeat; 
-*/
+@import "../scss/modules/swiper.scss";

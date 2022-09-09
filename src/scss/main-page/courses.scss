@@ -9,8 +9,8 @@
     .courses__wrapp {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 30px;
 
         .courses__box {
@@ -133,10 +133,10 @@
             }
         }
     }
-    .courses__button__bottom__wrapp{
+    .courses__button__bottom__wrapp {
         margin-top: 32px;
         text-align: center;
-        .courses__button__bottom{
+        .courses__button__bottom {
             @include tablet {
                 max-width: 329px;
             }

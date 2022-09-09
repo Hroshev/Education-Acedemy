@@ -57,23 +57,7 @@ const cardsProduct = [
   },
 ];
 
-
-// var wrapper = document.getElementById('wrapper');
-// var currentIndex = 0;
-// var currentLimit = 5;
-
-// function showArray() {
-//   currentLimit += currentIndex;
-//   for (currentIndex; currentIndex < currentLimit && currentIndex < cardsProduct.length; currentIndex++) {
-//     wrapper.innerHTML += cardsProduct[currentIndex] + "<br />";
-//   };
-// }
-
-// const coursesButton = document.querySelector('.courses__button__bottom')
-// coursesButton.onclick = () => {
-//   showArray()
-// }
-
+/* Function create element */
 const makeElement = function (tagName, className, text) {
   const element = document.createElement(tagName);
 
@@ -83,6 +67,7 @@ const makeElement = function (tagName, className, text) {
   return element;
 };
 
+/* Function categories background color */
 function backgroundColorcategories(categories){
   if(categories == "Math"){
     return "#E3F0FF"
@@ -142,14 +127,30 @@ const createCard = function (product) {
   return coursesBox;
 };
 
-/* Stretch the array */
+/* Output array elements */
 const cardList = document.querySelector(".courses__wrapp");
-
-for (let i = 0; i < cardsProduct.length; i++) {
-  const cardItem = createCard(cardsProduct[i]);
+let currentIndex = 0;
+let currentLimit = 3; //How many items to display
+for (currentIndex; currentIndex <= currentLimit - 1 && currentIndex < cardsProduct.length; currentIndex++) {
+  const cardItem = createCard(cardsProduct[currentIndex]);
   cardList.appendChild(cardItem);
 }
 
+
+/* Function show the item when clicked */
+function ShowElement() {
+  currentLimit += currentIndex;
+  for (currentIndex; currentIndex <= currentLimit && currentIndex < cardsProduct.length; currentIndex++) {
+    const cardItem = createCard(cardsProduct[currentIndex]);
+    cardList.appendChild(cardItem);
+};
+}
+
+/* Button */
+const button = document.querySelector('.courses__button__bottom')
+button.onclick = () => {
+  ShowElement()
+}
 
 /* Style first box */
 const firstCourse = document.querySelector(".course")

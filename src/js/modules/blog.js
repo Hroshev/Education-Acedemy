@@ -17,6 +17,8 @@ const cardsBlog = [
   },
   ];
   
+
+  /* Function create element */
   const makeElement = function (tagName, className, text) {
     const element = document.createElement(tagName);
   
@@ -26,6 +28,7 @@ const cardsBlog = [
     return element;
   };
   
+
   const createBlog = function (product) {
   
     const blogBox = makeElement("div", "blog__box");
@@ -52,13 +55,29 @@ const cardsBlog = [
     return blogBox;
   };
   
-  /* Stretch the array */
-  const cardListBlog = document.querySelector(".blog__wrapp");
-  
-  for (let i = 0; i < cardsBlog.length; i++) {
-    const cardItem = createBlog(cardsBlog[i]);
-    cardListBlog.appendChild(cardItem);
-  }
+/* Output array elements */
+const cardListBlog  = document.querySelector(".blog__wrapp");
+let currentIndex = 0;
+let currentLimit = 3; //How many items to display
+for (currentIndex; currentIndex <= currentLimit - 1 && currentIndex < cardsBlog.length; currentIndex++) {
+  const cardItemBlog = createBlog(cardsBlog[currentIndex]);
+  cardListBlog.appendChild(cardItemBlog);
+}
+
+  /* Function show the item when clicked */
+function ShowElement() {
+  currentLimit += currentIndex;
+  for (currentIndex; currentIndex <= currentLimit && currentIndex < cardsBlog.length; currentIndex++) {
+    const cardItemBlog = createBlog(cardsBlog[currentIndex]);
+    cardListBlog.appendChild(cardItemBlog);
+};
+}
+
+/* Button */
+const button = document.querySelector('.blog__button__bottom')
+button.onclick = () => {
+  ShowElement()
+}
   
   /* Style first box */
   const firstBox = document.querySelector(".blog__box")
