@@ -5,4 +5,5 @@ import "./modules/events.js";
 import "./modules/accordion.js";
 import "./modules/blog.js";
 import "./modules/popup.js";
+import "./modules/ScrollTo.js";
 import "./modules/date.js";

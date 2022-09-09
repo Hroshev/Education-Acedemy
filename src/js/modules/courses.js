@@ -57,6 +57,23 @@ const cardsProduct = [
   },
 ];
 
+
+// var wrapper = document.getElementById('wrapper');
+// var currentIndex = 0;
+// var currentLimit = 5;
+
+// function showArray() {
+//   currentLimit += currentIndex;
+//   for (currentIndex; currentIndex < currentLimit && currentIndex < cardsProduct.length; currentIndex++) {
+//     wrapper.innerHTML += cardsProduct[currentIndex] + "<br />";
+//   };
+// }
+
+// const coursesButton = document.querySelector('.courses__button__bottom')
+// coursesButton.onclick = () => {
+//   showArray()
+// }
+
 const makeElement = function (tagName, className, text) {
   const element = document.createElement(tagName);
 

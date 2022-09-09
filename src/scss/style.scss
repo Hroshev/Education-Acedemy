@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
 @import "../scss/reset.scss";
 @import "../scss/media-requests.scss";
-@import "../scss/adaptive-property.scss"; 
+// @import "../scss/adaptive-property.scss"; 
 
 /* text color */
 $first-color: #333333;
@@ -91,6 +91,7 @@ body {
 @import "../scss/main-page/courseFind.scss";
 @import "../scss/main-page/events.scss";
 @import "../scss/main-page/team.scss";
+@import "../scss/main-page/testimonials.scss";
 @import "../scss/main-page/faq.scss";
 @import "../scss/main-page/blog.scss";
 @import "../scss/main-page/download.scss";
@@ -101,28 +102,8 @@ body {
 @import "../scss/modules/popup.scss";
 @import "../scss/modules/swiper.scss"; 
 
-/* 
-@import "../scss/modules/popup.scss";
-@import "../scss/modules/burger.scss";
-@import "../scss/modules/swiper.scss"; 
-*/
-
 
 /* <---Наработки---> */
-
-//****BACKGROUND IMG after****
-/* 
-&::after{
-  position: absolute;
-  content: "";
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 0;
-  background: url("@img/callBack__phone.png") 50% 50%/cover no-repeat;
-  width: 70px;
-  height: 70px;
-} 
-*/
 
 //****Center IMG ****
 /*
